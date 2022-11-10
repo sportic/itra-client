@@ -1,0 +1,43 @@
+{
+  "name": "sportic/itra-client",
+  "description": "Itra API Client implementation for php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gabriel Solomon",
+      "email": "hello@gabrielsolomon.ro"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Sportic\\Itra\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sportic\\Itra\\Tests\\": "tests/",
+      "Sportic\\Itra\\Tests\\Fixtures\\": "tests/fixtures"
+    }
+  },
+  "require": {
+    "php": "^7.4|^8.0",
+    "bytic/rest-client": "dev-develop",
+    "bytic/collections": "^1.0"
+  },
+  "require-dev": {
+    "bytic/phpqatools": "^1.0",
+    "symfony/dotenv": "^5.0|^6.0"
+  },
+  "scripts": {
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true,
+      "ergebnis/composer-normalize": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "bytic/phpqatools": true
+    }
+  }
+}
