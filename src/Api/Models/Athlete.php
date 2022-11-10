@@ -82,6 +82,24 @@ class Athlete
         return $item;
     }
 
+    public function toArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'login' => $this->login,
+            'firstName' => $this->firstName,
+            'lastName' => $this->lastName,
+            'gender' => $this->gender,
+            'nationality' => $this->nationality,
+            'birthDate' => $this->birthDate,
+            'idVerified' => $this->idVerified,
+            'nbRes' => $this->nbRes,
+            'town' => $this->town,
+            'pi' => $this->pi,
+            'memberId' => $this->memberId,
+        ];
+    }
+
     /**
      * @return int
      */

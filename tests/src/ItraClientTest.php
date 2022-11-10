@@ -34,7 +34,6 @@ class ItraClientTest extends TestCase
         $return = $endpoint->find(RunnerListRequest::fromArray([
             'RunnerID' => '99999999999999',
         ]));
-        self::assertTrue($return->isSuccess());
         self::assertFalse($return->getFirstResult());
     }
 

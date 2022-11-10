@@ -12,7 +12,9 @@ class CollectionResponse extends AbstractResponse
 {
     public static function fromApiCollection($data, string $collectionClass): AbstractResponse
     {
-        $data->resData = call_user_func($collectionClass . '::fromApiData', $data->resData);
+        $data->resData = isset($data->resData) && is_array($data->resData)
+            ? call_user_func($collectionClass . '::fromApiData', $data->resData)
+            : new $collectionClass();
         return parent::fromApiData($data);
     }
 
